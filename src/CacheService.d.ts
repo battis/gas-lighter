@@ -1,0 +1,10 @@
+import * as Cache from './shared/EncodeDecode';
+export declare const getScriptCache: (key: string, decoder?: Cache.Decoder) => any;
+export declare const getDocumentCache: (key: string, decoder?: Cache.Decoder) => any;
+export declare const getUserCache: (key: string, decoder?: Cache.Decoder) => any;
+export declare const putScriptCache: (key: string, value: any, encoder?: Cache.Encoder, expirationInSeconds?: number) => void;
+export declare const putDocumentCache: (key: string, value: any, encoder?: Cache.Encoder, expirationInSeconds?: number) => void;
+export declare const putUserCache: (key: string, value: any, encoder?: Cache.Encoder, expirationInSeconds?: number) => void;
+export declare const removeScriptCache: (key: string) => void;
+export declare const removeDocumentCache: (key: string) => void;
+export declare const removeUserCache: (key: string) => void;

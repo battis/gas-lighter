@@ -1,0 +1,11 @@
+export declare function fcn(name: string, ...args: any[]): string;
+export declare function eq(a: string, b: string, stringify?: boolean): string;
+export declare const CHAR: (...args: any[]) => string;
+export declare const FILTER: (...args: any[]) => string;
+export declare const IF: (...args: any[]) => string;
+export declare const IFNA: (...args: any[]) => string;
+export declare const INDEX: (...args: any[]) => string;
+export declare const JOIN: (...args: any[]) => string;
+export declare const MATCH: (...args: any[]) => string;
+export declare const SORT: (...args: any[]) => string;
+export declare const UNIQUE: (...args: any[]) => string;
