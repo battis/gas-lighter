@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "author": "Seth Battis <seth@battis.net>",
   "license": "GPL-3.0",
-  "main": "./src/index.js",
-  "types": "./src/index.d.ts",
+  "main": "./src/index.ts",
+  "types": "./src/types.d.ts",
   "homepage": "https://github.com/battis/gas-lighter",
   "repository": {
     "type": "git",
@@ -14,7 +14,10 @@
     "url": "https://github.com/battis/gas-lighter/issues"
   },
   "scripts": {
-    "update": "pnpm update --shamefully-hoist; npm update --package-lock-only"
+    "update": "pnpm update --shamefully-hoist; npm update --package-lock-only",
+    "clean": "rimraf publish/src",
+    "copy-files": "copyfiles -u 1 \"src/**/*.html\" pubish/src",
+    "build": "npm run clean && tsc && npm rum copy-files"
   },
   "peerDependencies": {
     "@tsconfig/recommended": "^1.0.2",
@@ -27,7 +30,9 @@
     "@battis/prettier-config": "github:battis/prettier-config",
     "@tsconfig/recommended": "^1.0.2",
     "@types/google-apps-script": "^1.0.57",
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.14.1",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^4.1.2",
     "typescript": "^4.9.5"
   },
   "prettier": "@battis/prettier-config",
