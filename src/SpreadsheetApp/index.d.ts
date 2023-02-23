@@ -8,34 +8,10 @@ export * as DeveloperMetadata from './DeveloperMetadata';
 export * as Protection from './Protection';
 export declare const Dialog: {
     new (): {};
-    showModal: (options: {
-        message: string;
-        height?: number;
-        buttons?: (string | D.Button)[];
-        functionName?: string;
-    } & {
-        title: string;
-    }) => void;
-    showModeless: (options: {
-        message: string;
-        height?: number;
-        buttons?: (string | D.Button)[];
-        functionName?: string;
-    } & {
-        title: string;
-    }) => void;
-    getHtmlOutput: (options: {
-        message: string;
-        height?: number;
-        buttons?: (string | D.Button)[];
-        functionName?: string;
-    }) => GoogleAppsScript.HTML.HtmlOutput;
-    getHtml: (options: {
-        message: string;
-        height?: number;
-        buttons?: (string | D.Button)[];
-        functionName?: string;
-    }) => string;
+    showModal: (options: D.RootlessOptions) => void;
+    showModeless: (options: D.RootlessOptions) => void;
+    getHtmlOutput: (options: D.HtmlOptions) => GoogleAppsScript.HTML.HtmlOutput;
+    getHtml: (options: D.HtmlOptions) => string;
 };
 /** @deprecated */
 export declare const addImportrangePermission: typeof P.addImportrangePermission;

@@ -57,12 +57,17 @@ exports.showModeless = show.bind(null, 'showModelessDialog');
 const dialogClose = () => null;
 exports.dialogClose = dialogClose;
 const CLOSE = 'dialogClose';
-function getHtmlOutput({ message, buttons = [{ name: 'Ok' }], height = 100, functionName = CLOSE, }) {
+const HANDLER = 'handleSubmit_{{id}}';
+function getHtmlOutput({ message, buttons = [{ name: 'Ok' }], height = 100, functionName = CLOSE, handler = HANDLER, script = true, }) {
+    const id = Utilities.getUuid().replaceAll(/[^a-z0-9]/gi, '');
+    handler = handler.replace('{{id}}', id);
     return Html.createTemplate(content_html_1.default, {
         message,
         buttons: buttons.map(standardizeButton),
+        script,
         functionName,
-        id: Utilities.getUuid().replaceAll(/[^a-z0-9]/gi, ''),
+        handler,
+        id,
     }).setHeight(height);
 }
 exports.getHtmlOutput = getHtmlOutput;

@@ -8,16 +8,31 @@ export type Button = {
     value?: string;
     class?: string;
 };
-type HtmlOptions = {
+type BaseHtmlOptions = {
     message: string;
     height?: number;
     buttons?: (Button | string)[];
-    functionName?: string;
 };
-type RootlessOptions = HtmlOptions & {
+type HtmlOptionsWithBackEndCallback = BaseHtmlOptions & {
+    functionName?: string;
+    handler?: never;
+    script?: true;
+};
+type HtmlOptionsWithHandler = BaseHtmlOptions & {
+    functionName?: never;
+    handler?: string;
+    script?: true;
+};
+type HtmlOptionsWithoutScript = BaseHtmlOptions & {
+    functionName?: never;
+    handler?: never;
+    script: false;
+};
+export type HtmlOptions = HtmlOptionsWithHandler | HtmlOptionsWithBackEndCallback | HtmlOptionsWithoutScript;
+export type RootlessOptions = HtmlOptions & {
     title: string;
 };
-type Options = RootlessOptions & {
+export type Options = RootlessOptions & {
     root: Root;
 };
 export type Callback = {
@@ -28,7 +43,7 @@ export type ResponseHandler = (response: string) => string | Callback | void;
 export declare const showModal: (args_0: Options) => void;
 export declare const showModeless: (args_0: Options) => void;
 export declare const dialogClose: () => any;
-export declare function getHtmlOutput({ message, buttons, height, functionName, }: HtmlOptions): GoogleAppsScript.HTML.HtmlOutput;
+export declare function getHtmlOutput({ message, buttons, height, functionName, handler, script, }: HtmlOptions): GoogleAppsScript.HTML.HtmlOutput;
 export declare const getHtml: (options: HtmlOptions) => string;
 export declare function bindTo(root: Root): {
     new (): {};
