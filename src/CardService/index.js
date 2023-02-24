@@ -23,32 +23,36 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.newTextButton = exports.newDecordatedTexdt = exports.newTexdtParagraph = exports.pushCard = exports.replaceStack = exports.newCardSection = exports.newCardHeader = exports.newCard = exports.newAction = exports.stringify = exports.Widget = exports.Navigation = exports.Card = exports.Action = void 0;
-const A = __importStar(require("./Action"));
-const C = __importStar(require("./Card"));
-const N = __importStar(require("./Navigation"));
-const W = __importStar(require("./Widget"));
-exports.Action = A;
-exports.Card = C;
-exports.Navigation = N;
-exports.Widget = W;
+exports.newTextButton = exports.newDecordatedTexdt = exports.newTexdtParagraph = exports.pushCard = exports.replaceStack = exports.newCardSection = exports.newCardHeader = exports.newCard = exports.newAction = exports.stringify = void 0;
+const Action_module = __importStar(require("./Action"));
+const Card_module = __importStar(require("./Card"));
+const Navigation_module = __importStar(require("./Navigation"));
+const Widget_module = __importStar(require("./Widget"));
+var CardService;
+(function (CardService) {
+    CardService.Action = Action_module;
+    CardService.Card = Card_module;
+    CardService.Navigation = Navigation_module;
+    CardService.Widget = Widget_module;
+})(CardService || (CardService = {}));
+exports.default = CardService;
 /** @deprecated */
-exports.stringify = A.stringify;
+exports.stringify = Action_module.stringify;
 /** @deprecated */
-exports.newAction = A.create;
+exports.newAction = Action_module.create;
 /** @deprecated */
-exports.newCard = C.create;
+exports.newCard = Card_module.create;
 /** @deprecated */
-exports.newCardHeader = C.newCardHeader;
+exports.newCardHeader = Card_module.newCardHeader;
 /** @deprecated */
-exports.newCardSection = C.newCardSection;
+exports.newCardSection = Card_module.newCardSection;
 /** @deprecated */
-exports.replaceStack = N.replaceStack;
+exports.replaceStack = Navigation_module.replaceStack;
 /** @deprecated */
-exports.pushCard = N.pushCard;
+exports.pushCard = Navigation_module.pushCard;
 /** @deprecated */
-exports.newTexdtParagraph = W.newTextParagraph;
+exports.newTexdtParagraph = Widget_module.newTextParagraph;
 /** @deprecated */
-exports.newDecordatedTexdt = W.newDecoratedText;
+exports.newDecordatedTexdt = Widget_module.newDecoratedText;
 /** @deprecated */
-exports.newTextButton = W.newTextButton;
+exports.newTextButton = Widget_module.newTextButton;

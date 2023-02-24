@@ -23,5 +23,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Progress = void 0;
-exports.Progress = __importStar(require("./Progress"));
+const Progress_module = __importStar(require("./Progress"));
+var Element;
+(function (Element) {
+    Element.Progress = Progress_module;
+})(Element || (Element = {}));
+exports.default = Element;

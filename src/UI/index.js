@@ -23,5 +23,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Dialog = void 0;
-exports.Dialog = __importStar(require("./Dialog"));
+const Dialog_module = __importStar(require("./Dialog"));
+var UI;
+(function (UI) {
+    UI.Dialog = Dialog_module;
+})(UI || (UI = {}));
+exports.default = UI;

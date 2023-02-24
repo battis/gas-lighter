@@ -1,32 +1,38 @@
 /// <reference types="google-apps-script" />
 /// <reference types="google-apps-script" />
-import * as D from '../UI/Dialog';
-import * as F from './Function';
-import * as P from './Permission';
-import * as V from './Value';
-export * as DeveloperMetadata from './DeveloperMetadata';
-export * as Protection from './Protection';
-export declare const Dialog: {
-    new (): {};
-    showModal: (options: D.RootlessOptions) => void;
-    showModeless: (options: D.RootlessOptions) => void;
-    getHtmlOutput: (options: D.HtmlOptions) => GoogleAppsScript.HTML.HtmlOutput;
-    getHtml: (options: D.HtmlOptions) => string;
-};
+import * as Dialog_module from '../UI/Dialog';
+import * as DeveloperMetadata_module from './DeveloperMetadata';
+import * as Function_module from './Function';
+import * as Permission_module from './Permission';
+import * as Protection_module from './Protection';
+import * as Value_module from './Value';
+declare namespace SpreadsheetApp_namespace {
+    const Dialog: {
+        new (): {};
+        showModal: (options: Dialog_module.RootlessOptions) => void;
+        showModeless: (options: Dialog_module.RootlessOptions) => void;
+        getHtmlOutput: (options: Dialog_module.HtmlOptions) => GoogleAppsScript.HTML.HtmlOutput;
+        getHtml: (options: Dialog_module.HtmlOptions) => string;
+    };
+    export import Function = Function_module;
+    export import Permission = Permission_module;
+    export import Value = Value_module;
+    export import DeveloperMetadata = DeveloperMetadata_module;
+    export import Protection = Protection_module;
+}
+export default SpreadsheetApp_namespace;
 /** @deprecated */
-export declare const addImportrangePermission: typeof P.addImportrangePermission;
-export declare const Permission: typeof P;
+export declare const addImportrangePermission: typeof Permission_module.addImportrangePermission;
 /** @deprecated */
-export declare const setValue: typeof V.set;
+export declare const setValue: typeof Value_module.set;
 /** @deprecated */
-export declare const replaceWithDisplayValues: typeof V.replaceWithDisplayValues;
+export declare const replaceWithDisplayValues: typeof Value_module.replaceWithDisplayValues;
 /** @deprecated */
 export declare const getSheetDisplayValues: (sheet: GoogleAppsScript.Spreadsheet.Sheet) => string[][];
-export declare const Value: typeof V;
 /** @deprecated */
-export declare const fcn: typeof F.fcn;
+export declare const fcn: typeof Function_module.fcn;
 /** @deprecated */
-export declare const eq: typeof F.eq;
+export declare const eq: typeof Function_module.eq;
 /** @deprecated */
 export declare const CHAR: (...args: any[]) => string;
 /** @deprecated */
@@ -45,4 +51,3 @@ export declare const MATCH: (...args: any[]) => string;
 export declare const SORT: (...args: any[]) => string;
 /** @deprecated */
 export declare const UNIQUE: (...args: any[]) => string;
-export declare const Function: typeof F;

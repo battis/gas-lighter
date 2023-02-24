@@ -1,6 +1,6 @@
 /// <reference types="google-apps-script" />
 /// <reference types="google-apps-script" />
-type Root = {
+export type Root = {
     getUi: () => GoogleAppsScript.Base.Ui;
 };
 export type Button = {

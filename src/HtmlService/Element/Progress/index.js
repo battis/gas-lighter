@@ -1,48 +1,25 @@
 "use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getInstance = exports.bindTo = exports.getHtmlOutput = exports.getProgress = exports.reset = exports.getHtml = exports.setHtml = exports.getComplete = exports.setComplete = exports.getMax = exports.setMax = exports.decrementValue = exports.incrementValue = exports.getValue = exports.setValue = exports.getStatus = exports.setStatus = void 0;
-const Html = __importStar(require("../../"));
-const Cache = __importStar(require("../../../CacheService"));
+const CacheService_1 = require("../../../CacheService");
+const Template_1 = require("../../Template");
 const page_html_1 = __importDefault(require("./page.html"));
 const progress_html_1 = __importDefault(require("./progress.html"));
 function prefix(key, token, delimiter = '.') {
     return ['battis', 'Terse', 'HtmlService', 'Progress', key, token].join(delimiter);
 }
 function get(token, key) {
-    return Cache.getUserCache(prefix(key, token));
+    return (0, CacheService_1.getUserCache)(prefix(key, token));
 }
 function put(token, key, value) {
-    return Cache.putUserCache(prefix(key, token), value);
+    return (0, CacheService_1.putUserCache)(prefix(key, token), value);
 }
 // FIXME I don't think "remove" means what you think it means
 function remove(token, key) {
-    return Cache.removeUserCache(prefix(key, token));
+    return (0, CacheService_1.removeUserCache)(prefix(key, token));
 }
 function putAndUpdate(token, key, value) {
     put(token, key, value);
@@ -79,9 +56,9 @@ function update(key) {
     const value = (0, exports.getValue)(key);
     const max = (0, exports.getMax)(key);
     const status = (0, exports.getStatus)(key) || '';
-    (0, exports.setHtml)(key, Html.createTemplate(progress_html_1.default, { value, max, status }));
+    (0, exports.setHtml)(key, (0, Template_1.createTemplate)(progress_html_1.default, { value, max, status }));
 }
-const getHtmlOutput = (thread) => Html.createTemplate(page_html_1.default, { thread }).setHeight(100);
+const getHtmlOutput = (thread) => (0, Template_1.createTemplate)(page_html_1.default, { thread }).setHeight(100);
 exports.getHtmlOutput = getHtmlOutput;
 function bindTo(key) {
     var _a;

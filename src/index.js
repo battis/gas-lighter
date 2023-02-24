@@ -22,37 +22,43 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Terse = exports.Helper = void 0;
-const CacheService = __importStar(require("./CacheService"));
-const CardService = __importStar(require("./CardService"));
-const DriveApp = __importStar(require("./DriveApp"));
-const Globals = __importStar(require("./Globals"));
-const HtmlService = __importStar(require("./HtmlService"));
-const PropertiesService = __importStar(require("./PropertiesService"));
-const SpreadsheetApp = __importStar(require("./SpreadsheetApp"));
-const UI = __importStar(require("./UI"));
-const g = {
-    CacheService,
-    CardService,
-    DriveApp,
-    Globals,
-    HtmlService,
-    PropertiesService,
-    SpreadsheetApp,
-    UI,
-};
+const CacheService_module = __importStar(require("./CacheService"));
+const CardService_1 = __importDefault(require("./CardService"));
+const DriveApp_1 = __importDefault(require("./DriveApp"));
+const Globals_module = __importStar(require("./Globals"));
+const HtmlService_1 = __importDefault(require("./HtmlService"));
+const PropertiesService_module = __importStar(require("./PropertiesService"));
+const SpreadsheetApp_1 = __importDefault(require("./SpreadsheetApp"));
+const UI_1 = __importDefault(require("./UI"));
+var g;
+(function (g) {
+    g.CacheService = CacheService_module;
+    g.CardService = CardService_1.default;
+    g.DriveApp = DriveApp_1.default;
+    g.Globals = Globals_module;
+    g.HtmlService = HtmlService_1.default;
+    g.PropertiesService = PropertiesService_module;
+    g.SpreadsheetApp = SpreadsheetApp_1.default;
+    g.UI = UI_1.default;
+})(g || (g = {}));
 exports.default = g;
 /** @deprecated */
-exports.Helper = {
-    DriveApp,
-    SpreadsheetApp,
-};
+var Helper;
+(function (Helper) {
+    Helper.DriveApp = DriveApp_1.default;
+    Helper.SpreadsheetApp = SpreadsheetApp_1.default;
+})(Helper = exports.Helper || (exports.Helper = {}));
 /** @deprecated */
-exports.Terse = {
-    CacheService,
-    CardService,
-    HtmlService,
-    PropertiesService,
-    SpreadsheetApp,
-};
+var Terse;
+(function (Terse) {
+    Terse.CacheService = CacheService_module;
+    Terse.CardService = CardService_1.default;
+    Terse.HtmlService = HtmlService_1.default;
+    Terse.PropertiesService = PropertiesService_module;
+    Terse.SpreadsheetApp = SpreadsheetApp_1.default;
+})(Terse = exports.Terse || (exports.Terse = {}));
