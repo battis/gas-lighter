@@ -23,7 +23,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.newTextButton = exports.newDecordatedTexdt = exports.newTexdtParagraph = exports.pushCard = exports.replaceStack = exports.newCardSection = exports.newCardHeader = exports.newCard = exports.newAction = exports.stringify = void 0;
 const Action_module = __importStar(require("./Action"));
 const Card_module = __importStar(require("./Card"));
 const Navigation_module = __importStar(require("./Navigation"));
@@ -36,23 +35,3 @@ var CardService;
     CardService.Widget = Widget_module;
 })(CardService || (CardService = {}));
 exports.default = CardService;
-/** @deprecated */
-exports.stringify = Action_module.stringify;
-/** @deprecated */
-exports.newAction = Action_module.create;
-/** @deprecated */
-exports.newCard = Card_module.create;
-/** @deprecated */
-exports.newCardHeader = Card_module.newCardHeader;
-/** @deprecated */
-exports.newCardSection = Card_module.newCardSection;
-/** @deprecated */
-exports.replaceStack = Navigation_module.replaceStack;
-/** @deprecated */
-exports.pushCard = Navigation_module.pushCard;
-/** @deprecated */
-exports.newTexdtParagraph = Widget_module.newTextParagraph;
-/** @deprecated */
-exports.newDecordatedTexdt = Widget_module.newDecoratedText;
-/** @deprecated */
-exports.newTextButton = Widget_module.newTextButton;

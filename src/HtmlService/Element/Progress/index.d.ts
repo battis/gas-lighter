@@ -1,40 +1,38 @@
 /// <reference types="google-apps-script" />
-export declare const setStatus: (key: string, value: any) => void;
-export declare const getStatus: (key: string) => any;
-export declare const setValue: (key: string, value: any) => void;
-export declare const getValue: (key: string) => any;
-export declare const incrementValue: (key: string, increment?: number) => void;
-export declare const decrementValue: (key: string, decrement?: number) => void;
-export declare const setMax: (key: string, value: any) => void;
-export declare const getMax: (key: string) => any;
-export declare const setComplete: (key: string, value: any) => void;
-export declare const getComplete: (key: string) => any;
-export declare const setHtml: (key: string, value: any) => void;
-export declare const getHtml: (key: string) => any;
-export declare function reset(key: string): void;
-export declare const getProgress: (key: string) => {
+export declare const setStatus: (thread: string, status: string) => void;
+export declare const getStatus: (thread: string) => any;
+export declare const setValue: (thread: string, value: number) => void;
+export declare const getValue: (thread: string) => any;
+export declare const incrementValue: (thread: string, increment?: number) => void;
+export declare const decrementValue: (thread: string, decrement?: number) => void;
+export declare const setMax: (thread: string, max: number) => void;
+export declare const getMax: (thread: string) => any;
+export declare const setComplete: (thread: string, message: string) => void;
+export declare const getComplete: (thread: string) => any;
+export declare const setHtml: (thread: string, html: string) => void;
+export declare const getHtml: (thread: string) => any;
+export declare function reset(thread: string): void;
+export declare const getProgress: (thread: string) => {
     html: any;
     complete: any;
 };
 export declare const getHtmlOutput: (thread: string) => GoogleAppsScript.HTML.HtmlOutput;
-export declare function bindTo(key: string): {
-    new (): {};
+export type ProgressBinding = {
     reset: () => void;
     getProgress: () => {
-        html: any;
-        complete: any;
+        html: string;
+        complete: string;
     };
-    setStatus: (value: any) => void;
-    getStatus: () => any;
-    setValue: (value: any) => void;
-    getValue: () => any;
-    incrementValue: (increment?: number) => void;
-    decrementValue: (decrement?: number) => void;
-    setMax: (value: any) => void;
-    getMax: () => any;
-    setComplete: (value: any) => void;
-    getComplete: () => any;
-    getHtml: () => any;
+    setStatus: (status: string) => void;
+    getStatus: () => string;
+    setValue: (value: number) => void;
+    getValue: () => number;
+    incrementValue: () => void;
+    decrementValue: () => void;
+    setMax: (max: number) => void;
+    getMax: () => number;
+    setComplete: (message: string) => void;
+    getComplete: () => string;
+    getHtml: () => string;
 };
-/** @deprecated */
-export declare const getInstance: typeof bindTo;
+export declare function bindTo(thread: string): ProgressBinding;

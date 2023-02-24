@@ -9,23 +9,3 @@ declare namespace CardService {
     export import Widget = Widget_module;
 }
 export default CardService;
-/** @deprecated */
-export declare const stringify: typeof Action_module.stringify;
-/** @deprecated */
-export declare const newAction: typeof Action_module.create;
-/** @deprecated */
-export declare const newCard: typeof Card_module.create;
-/** @deprecated */
-export declare const newCardHeader: typeof Card_module.newCardHeader;
-/** @deprecated */
-export declare const newCardSection: typeof Card_module.newCardSection;
-/** @deprecated */
-export declare const replaceStack: typeof Navigation_module.replaceStack;
-/** @deprecated */
-export declare const pushCard: typeof Navigation_module.pushCard;
-/** @deprecated */
-export declare const newTexdtParagraph: typeof Widget_module.newTextParagraph;
-/** @deprecated */
-export declare const newDecordatedTexdt: typeof Widget_module.newDecoratedText;
-/** @deprecated */
-export declare const newTextButton: typeof Widget_module.newTextButton;

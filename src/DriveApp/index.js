@@ -23,12 +23,9 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.addPermission = void 0;
 const Permission_module = __importStar(require("./Permission"));
 var DriveApp;
 (function (DriveApp) {
     DriveApp.Permission = Permission_module;
 })(DriveApp || (DriveApp = {}));
 exports.default = DriveApp;
-/** @deprecated */
-exports.addPermission = Permission_module.add;

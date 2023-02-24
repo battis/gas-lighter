@@ -3,82 +3,90 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getInstance = exports.bindTo = exports.getHtmlOutput = exports.getProgress = exports.reset = exports.getHtml = exports.setHtml = exports.getComplete = exports.setComplete = exports.getMax = exports.setMax = exports.decrementValue = exports.incrementValue = exports.getValue = exports.setValue = exports.getStatus = exports.setStatus = void 0;
+exports.bindTo = exports.getHtmlOutput = exports.getProgress = exports.reset = exports.getHtml = exports.setHtml = exports.getComplete = exports.setComplete = exports.getMax = exports.setMax = exports.decrementValue = exports.incrementValue = exports.getValue = exports.setValue = exports.getStatus = exports.setStatus = void 0;
 const CacheService_1 = require("../../../CacheService");
 const Template_1 = require("../../Template");
 const page_html_1 = __importDefault(require("./page.html"));
 const progress_html_1 = __importDefault(require("./progress.html"));
-function prefix(key, token, delimiter = '.') {
-    return ['battis', 'Terse', 'HtmlService', 'Progress', key, token].join(delimiter);
+function prefix(thread, token, delimiter = '.') {
+    return ['battis', 'Terse', 'HtmlService', 'Progress', thread, token].join(delimiter);
 }
-function get(token, key) {
-    return (0, CacheService_1.getUserCache)(prefix(key, token));
+function get(token, thread) {
+    return (0, CacheService_1.getUserCache)(prefix(thread, token));
 }
-function put(token, key, value) {
-    return (0, CacheService_1.putUserCache)(prefix(key, token), value);
+function put(token, thread, value) {
+    return (0, CacheService_1.putUserCache)(prefix(thread, token), value);
 }
 // FIXME I don't think "remove" means what you think it means
-function remove(token, key) {
-    return (0, CacheService_1.removeUserCache)(prefix(key, token));
+function remove(token, thread) {
+    return (0, CacheService_1.removeUserCache)(prefix(thread, token));
 }
-function putAndUpdate(token, key, value) {
-    put(token, key, value);
-    update(key);
+function putAndUpdate(token, thread, value) {
+    put(token, thread, value);
+    update(thread);
 }
-exports.setStatus = putAndUpdate.bind(null, 'status');
-exports.getStatus = get.bind(null, 'status');
-exports.setValue = putAndUpdate.bind(null, 'value');
-exports.getValue = get.bind(null, 'value');
-const incrementValue = (key, increment = 1) => (0, exports.setValue)(key, (0, exports.getValue)(key) + increment);
+const setStatus = (thread, status) => putAndUpdate('status', thread, status);
+exports.setStatus = setStatus;
+const getStatus = (thread) => get('status', thread);
+exports.getStatus = getStatus;
+const setValue = (thread, value) => putAndUpdate('value', thread, value);
+exports.setValue = setValue;
+const getValue = (thread) => get('value', thread);
+exports.getValue = getValue;
+const incrementValue = (thread, increment = 1) => (0, exports.setValue)(thread, (0, exports.getValue)(thread) + increment);
 exports.incrementValue = incrementValue;
-const decrementValue = (key, decrement = 1) => (0, exports.setValue)(key, (0, exports.getValue)(key) - decrement);
+const decrementValue = (thread, decrement = 1) => (0, exports.setValue)(thread, (0, exports.getValue)(thread) - decrement);
 exports.decrementValue = decrementValue;
-exports.setMax = putAndUpdate.bind(null, 'max');
-exports.getMax = get.bind(null, 'max');
-exports.setComplete = put.bind(null, 'complete');
-exports.getComplete = get.bind(null, 'complete');
-exports.setHtml = put.bind(null, 'html');
-exports.getHtml = get.bind(null, 'html');
-function reset(key) {
-    remove(key, 'complete');
-    remove(key, 'status');
-    (0, exports.setValue)(key, 0);
+const setMax = (thread, max) => putAndUpdate('max', thread, max);
+exports.setMax = setMax;
+const getMax = (thread) => get('max', thread);
+exports.getMax = getMax;
+const setComplete = (thread, message) => put('complete', thread, message);
+exports.setComplete = setComplete;
+const getComplete = (thread) => get('complete', thread);
+exports.getComplete = getComplete;
+const setHtml = (thread, html) => put('html', thread, html);
+exports.setHtml = setHtml;
+const getHtml = (thread) => get('html', thread);
+exports.getHtml = getHtml;
+function reset(thread) {
+    remove(thread, 'complete');
+    remove(thread, 'status');
+    (0, exports.setValue)(thread, 0);
 }
 exports.reset = reset;
-const getProgress = (key) => ({
-    html: (0, exports.getHtml)(key),
-    complete: (0, exports.getComplete)(key),
+const getProgress = (thread) => ({
+    html: (0, exports.getHtml)(thread),
+    complete: (0, exports.getComplete)(thread),
 });
 exports.getProgress = getProgress;
 // TODO add indeterminate option
 // TODO add timer display/estimate
-function update(key) {
-    const value = (0, exports.getValue)(key);
-    const max = (0, exports.getMax)(key);
-    const status = (0, exports.getStatus)(key) || '';
-    (0, exports.setHtml)(key, (0, Template_1.createTemplate)(progress_html_1.default, { value, max, status }).getContent());
+function update(thread) {
+    const value = (0, exports.getValue)(thread);
+    const max = (0, exports.getMax)(thread);
+    const status = (0, exports.getStatus)(thread) || '';
+    (0, exports.setHtml)(thread, (0, Template_1.createTemplate)(progress_html_1.default, { value, max, status }).getContent());
 }
 const getHtmlOutput = (thread) => (0, Template_1.createTemplate)(page_html_1.default, { thread }).setHeight(100);
 exports.getHtmlOutput = getHtmlOutput;
-function bindTo(key) {
+function bindTo(thread) {
     var _a;
     return _a = class {
         },
-        _a.reset = reset.bind(null, key),
-        _a.getProgress = exports.getProgress.bind(null, key),
-        _a.setStatus = exports.setStatus.bind(null, key),
-        _a.getStatus = exports.getStatus.bind(null, key),
-        _a.setValue = exports.setValue.bind(null, key),
-        _a.getValue = exports.getValue.bind(null, key),
-        _a.incrementValue = exports.incrementValue.bind(null, key),
-        _a.decrementValue = exports.decrementValue.bind(null, key),
-        _a.setMax = exports.setMax.bind(null, key),
-        _a.getMax = exports.getMax.bind(null, key),
-        _a.setComplete = exports.setComplete.bind(null, key),
-        _a.getComplete = exports.getComplete.bind(null, key),
-        _a.getHtml = exports.getHtml.bind(null, key),
+        _a.reset = reset.bind(null, thread),
+        _a.getProgress = exports.getProgress.bind(null, thread),
+        _a.setStatus = exports.setStatus.bind(null, thread),
+        _a.getStatus = exports.getStatus.bind(null, thread),
+        _a.setValue = exports.setValue.bind(null, thread),
+        _a.getValue = exports.getValue.bind(null, thread),
+        _a.incrementValue = exports.incrementValue.bind(null, thread),
+        _a.decrementValue = exports.decrementValue.bind(null, thread),
+        _a.setMax = exports.setMax.bind(null, thread),
+        _a.getMax = exports.getMax.bind(null, thread),
+        _a.setComplete = exports.setComplete.bind(null, thread),
+        _a.getComplete = exports.getComplete.bind(null, thread),
+        _a.getHtml = exports.getHtml.bind(null, thread),
         _a;
 }
 exports.bindTo = bindTo;
-/** @deprecated */
-exports.getInstance = bindTo;

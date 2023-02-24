@@ -26,7 +26,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Terse = exports.Helper = void 0;
 const CacheService_module = __importStar(require("./CacheService"));
 const CardService_1 = __importDefault(require("./CardService"));
 const DriveApp_1 = __importDefault(require("./DriveApp"));
@@ -47,18 +46,3 @@ var g;
     g.UI = UI_1.default;
 })(g || (g = {}));
 exports.default = g;
-/** @deprecated */
-var Helper;
-(function (Helper) {
-    Helper.DriveApp = DriveApp_1.default;
-    Helper.SpreadsheetApp = SpreadsheetApp_1.default;
-})(Helper = exports.Helper || (exports.Helper = {}));
-/** @deprecated */
-var Terse;
-(function (Terse) {
-    Terse.CacheService = CacheService_module;
-    Terse.CardService = CardService_1.default;
-    Terse.HtmlService = HtmlService_1.default;
-    Terse.PropertiesService = PropertiesService_module;
-    Terse.SpreadsheetApp = SpreadsheetApp_1.default;
-})(Terse = exports.Terse || (exports.Terse = {}));

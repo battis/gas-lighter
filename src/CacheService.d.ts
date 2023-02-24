@@ -1,4 +1,5 @@
-import * as Cache from './shared/EncodeDecode';
+import * as Cache_module from './shared/EncodeDecode';
+export import Cache = Cache_module;
 export declare const getScriptCache: (key: string, decoder?: Cache.Decoder) => any;
 export declare const getDocumentCache: (key: string, decoder?: Cache.Decoder) => any;
 export declare const getUserCache: (key: string, decoder?: Cache.Decoder) => any;
