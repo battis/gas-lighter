@@ -56,7 +56,7 @@ function update(key) {
     const value = (0, exports.getValue)(key);
     const max = (0, exports.getMax)(key);
     const status = (0, exports.getStatus)(key) || '';
-    (0, exports.setHtml)(key, (0, Template_1.createTemplate)(progress_html_1.default, { value, max, status }));
+    (0, exports.setHtml)(key, (0, Template_1.createTemplate)(progress_html_1.default, { value, max, status }).getContent());
 }
 const getHtmlOutput = (thread) => (0, Template_1.createTemplate)(page_html_1.default, { thread }).setHeight(100);
 exports.getHtmlOutput = getHtmlOutput;
