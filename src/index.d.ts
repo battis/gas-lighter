@@ -1,27 +1,32 @@
-/// <reference types="google-apps-script" />
-/// <reference types="google-apps-script" />
-/// <reference types="google-apps-script" />
-/// <reference types="google-apps-script" />
-/// <reference types="google-apps-script" />
-/// <reference types="google-apps-script" />
-export * as CacheService from './CacheService';
-export * as CardService from './CardService';
-export * as DriveApp from './DriveApp';
-export * as Globals from './Globals';
-export * as HtmlService from './HtmlService';
-export * as PropertiesService from './PropertiesService';
-export * as SpreadsheetApp from './SpreadsheetApp';
-export * as UI from './UI';
+import * as CacheService from './CacheService';
+import * as CardService from './CardService';
+import * as DriveApp from './DriveApp';
+import * as Globals from './Globals';
+import * as HtmlService from './HtmlService';
+import * as PropertiesService from './PropertiesService';
+import * as SpreadsheetApp from './SpreadsheetApp';
+import * as UI from './UI';
+declare const g: {
+    CacheService: typeof CacheService;
+    CardService: typeof CardService;
+    DriveApp: typeof DriveApp;
+    Globals: typeof Globals;
+    HtmlService: typeof HtmlService;
+    PropertiesService: typeof PropertiesService;
+    SpreadsheetApp: typeof SpreadsheetApp;
+    UI: typeof UI;
+};
+export default g;
 /** @deprecated */
 export declare const Helper: {
-    DriveApp: GoogleAppsScript.Drive.DriveApp;
-    SpreadsheetApp: GoogleAppsScript.Spreadsheet.SpreadsheetApp;
+    DriveApp: typeof DriveApp;
+    SpreadsheetApp: typeof SpreadsheetApp;
 };
 /** @deprecated */
 export declare const Terse: {
-    CacheService: GoogleAppsScript.Cache.CacheService;
-    CardService: GoogleAppsScript.Card_Service.CardService;
-    HtmlService: GoogleAppsScript.HTML.HtmlService;
-    PropertiesService: GoogleAppsScript.Properties.PropertiesService;
-    SpreadsheetApp: GoogleAppsScript.Spreadsheet.SpreadsheetApp;
+    CacheService: typeof CacheService;
+    CardService: typeof CardService;
+    HtmlService: typeof HtmlService;
+    PropertiesService: typeof PropertiesService;
+    SpreadsheetApp: typeof SpreadsheetApp;
 };

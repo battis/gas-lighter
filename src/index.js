@@ -23,15 +23,26 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Terse = exports.Helper = exports.UI = exports.SpreadsheetApp = exports.PropertiesService = exports.HtmlService = exports.Globals = exports.DriveApp = exports.CardService = exports.CacheService = void 0;
-exports.CacheService = __importStar(require("./CacheService"));
-exports.CardService = __importStar(require("./CardService"));
-exports.DriveApp = __importStar(require("./DriveApp"));
-exports.Globals = __importStar(require("./Globals"));
-exports.HtmlService = __importStar(require("./HtmlService"));
-exports.PropertiesService = __importStar(require("./PropertiesService"));
-exports.SpreadsheetApp = __importStar(require("./SpreadsheetApp"));
-exports.UI = __importStar(require("./UI"));
+exports.Terse = exports.Helper = void 0;
+const CacheService = __importStar(require("./CacheService"));
+const CardService = __importStar(require("./CardService"));
+const DriveApp = __importStar(require("./DriveApp"));
+const Globals = __importStar(require("./Globals"));
+const HtmlService = __importStar(require("./HtmlService"));
+const PropertiesService = __importStar(require("./PropertiesService"));
+const SpreadsheetApp = __importStar(require("./SpreadsheetApp"));
+const UI = __importStar(require("./UI"));
+const g = {
+    CacheService,
+    CardService,
+    DriveApp,
+    Globals,
+    HtmlService,
+    PropertiesService,
+    SpreadsheetApp,
+    UI,
+};
+exports.default = g;
 /** @deprecated */
 exports.Helper = {
     DriveApp,
