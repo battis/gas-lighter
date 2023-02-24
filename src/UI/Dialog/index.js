@@ -34,10 +34,14 @@ exports.showModeless = show.bind(null, 'showModelessDialog');
 const dialogClose = () => null;
 exports.dialogClose = dialogClose;
 const CLOSE = 'dialogClose';
-const HANDLER = 'handleSubmit_{{id}}';
-function getHtmlOutput({ message, buttons = [{ name: 'Ok' }], height = 100, functionName = CLOSE, handler = HANDLER, script = true, }) {
+function getHtmlOutput({ message, buttons = [{ name: 'Ok' }], height = 100, functionName, handler, script = true, }) {
     const id = Utilities.getUuid().replaceAll(/[^a-z0-9]/gi, '');
-    handler = handler.replace('{{id}}', id);
+    if (handler) {
+        handler = handler.replace('{{id}}', id);
+    }
+    else if (!functionName && script) {
+        functionName = CLOSE;
+    }
     return (0, Template_1.createTemplate)(content_html_1.default, {
         message,
         buttons: buttons.map(standardizeButton),
