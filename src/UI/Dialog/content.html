@@ -17,13 +17,13 @@
 <script>
   <? if (data.functionName) { ?>
   function handleResponse_<?!= data.id ?>(response) {
-      if (typeof response == 'string') {
+      if (!response) {
+          google.script.host.close();
+      } else if (typeof response == 'string') {
           replaceContent(html);
       } else if ('callback' in response) {
           const args = callback.args || [];
           window[callback.functionName](...args);
-      } else {
-          google.script.host.close();
       }
   }
   <? } ?>
