@@ -49,5 +49,6 @@ export type DialogBinding<T> = {
     showModal: (options: RootlessOptions) => void;
     showModeless: (options: RootlessOptions) => void;
     getHtmlOutput: (options: HtmlOptions) => GoogleAppsScript.HTML.HtmlOutput;
+    getHtml: (options: HtmlOptions) => string;
 };
 export declare function bindTo<T>(root: T & Root): DialogBinding<T>;
