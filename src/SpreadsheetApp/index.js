@@ -28,14 +28,16 @@ const DeveloperMetadata_module = __importStar(require("./DeveloperMetadata"));
 const Function_module = __importStar(require("./Function"));
 const Permission_module = __importStar(require("./Permission"));
 const Protection_module = __importStar(require("./Protection"));
+const Range_module = __importStar(require("./Range"));
 const Value_module = __importStar(require("./Value"));
 var SpreadsheetApp_namespace;
 (function (SpreadsheetApp_namespace) {
+    SpreadsheetApp_namespace.DeveloperMetadata = DeveloperMetadata_module;
     SpreadsheetApp_namespace.Dialog = Dialog_module.bindTo(SpreadsheetApp);
     SpreadsheetApp_namespace.Function = Function_module;
     SpreadsheetApp_namespace.Permission = Permission_module;
-    SpreadsheetApp_namespace.Value = Value_module;
-    SpreadsheetApp_namespace.DeveloperMetadata = DeveloperMetadata_module;
     SpreadsheetApp_namespace.Protection = Protection_module;
+    SpreadsheetApp_namespace.Range = Range_module;
+    SpreadsheetApp_namespace.Value = Value_module;
 })(SpreadsheetApp_namespace || (SpreadsheetApp_namespace = {}));
 exports.default = SpreadsheetApp_namespace;
