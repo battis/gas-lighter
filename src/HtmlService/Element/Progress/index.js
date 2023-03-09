@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.bindTo = exports.getHtmlOutput = exports.getProgress = exports.reset = exports.getHtml = exports.setHtml = exports.getComplete = exports.setComplete = exports.getMax = exports.setMax = exports.decrementValue = exports.incrementValue = exports.getValue = exports.setValue = exports.getStatus = exports.setStatus = void 0;
+exports.bindTo = exports.getHtmlOutput = exports.getProgress = exports.reset = exports.getHtml = exports.setHtml = exports.getComplete = exports.setComplete = exports.decrementMax = exports.incrementMax = exports.getMax = exports.setMax = exports.decrementValue = exports.incrementValue = exports.getValue = exports.setValue = exports.getStatus = exports.setStatus = void 0;
 const CacheService_1 = require("../../../CacheService");
 const Template_1 = require("../../Template");
 const page_html_1 = __importDefault(require("./page.html"));
@@ -41,6 +41,10 @@ const setMax = (thread, max) => putAndUpdate('max', thread, max);
 exports.setMax = setMax;
 const getMax = (thread) => get('max', thread);
 exports.getMax = getMax;
+const incrementMax = (thread, increment = 1) => (0, exports.setMax)(thread, (0, exports.getMax)(thread) + increment);
+exports.incrementMax = incrementMax;
+const decrementMax = (thread, decrement = 1) => (0, exports.setMax)(thread, (0, exports.getMax)(thread) - decrement);
+exports.decrementMax = decrementMax;
 const setComplete = (thread, message) => put('complete', thread, message);
 exports.setComplete = setComplete;
 const getComplete = (thread) => get('complete', thread);
@@ -84,6 +88,8 @@ function bindTo(thread) {
         _a.decrementValue = exports.decrementValue.bind(null, thread),
         _a.setMax = exports.setMax.bind(null, thread),
         _a.getMax = exports.getMax.bind(null, thread),
+        _a.incrementMax = exports.incrementMax.bind(null, thread),
+        _a.decrementMax = exports.decrementMax.bind(null, thread),
         _a.setComplete = exports.setComplete.bind(null, thread),
         _a.getComplete = exports.getComplete.bind(null, thread),
         _a.getHtml = exports.getHtml.bind(null, thread),
