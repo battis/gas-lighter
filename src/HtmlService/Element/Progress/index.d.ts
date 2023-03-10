@@ -1,4 +1,7 @@
 /// <reference types="google-apps-script" />
+type Completion = string | true | {
+    html: string;
+};
 export declare const setStatus: (thread: string, status: string) => void;
 export declare const getStatus: (thread: string) => any;
 export declare const setValue: (thread: string, value: number) => void;
@@ -9,7 +12,7 @@ export declare const setMax: (thread: string, max: number) => void;
 export declare const getMax: (thread: string) => any;
 export declare const incrementMax: (thread: string, increment?: number) => void;
 export declare const decrementMax: (thread: string, decrement?: number) => void;
-export declare const setComplete: (thread: string, message: string) => void;
+export declare const setComplete: (thread: string, completion: Completion) => void;
 export declare const getComplete: (thread: string) => any;
 export declare const setHtml: (thread: string, html: string) => void;
 export declare const getHtml: (thread: string) => any;
@@ -38,3 +41,4 @@ export type ProgressBinding = {
     getHtml: () => string;
 };
 export declare function bindTo(thread: string): ProgressBinding;
+export {};

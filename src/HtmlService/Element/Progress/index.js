@@ -45,7 +45,7 @@ const incrementMax = (thread, increment = 1) => (0, exports.setMax)(thread, (0, 
 exports.incrementMax = incrementMax;
 const decrementMax = (thread, decrement = 1) => (0, exports.setMax)(thread, (0, exports.getMax)(thread) - decrement);
 exports.decrementMax = decrementMax;
-const setComplete = (thread, message) => put('complete', thread, message);
+const setComplete = (thread, completion) => put('complete', thread, completion);
 exports.setComplete = setComplete;
 const getComplete = (thread) => get('complete', thread);
 exports.getComplete = getComplete;
