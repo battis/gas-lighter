@@ -51,7 +51,7 @@ const getComplete = (thread) => get('complete', thread);
 exports.getComplete = getComplete;
 const setHtml = (thread, html) => put('html', thread, html);
 exports.setHtml = setHtml;
-const getHtml = (thread) => get('html', thread) || `<progress style="width: 100%"></progress>`;
+const getHtml = (thread) => get('html', thread) || (0, Template_1.createTemplate)(progress_html_1.default, {}).getContent();
 exports.getHtml = getHtml;
 function reset(thread) {
     remove(thread, 'complete');
