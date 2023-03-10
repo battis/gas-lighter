@@ -1,5 +1,5 @@
 /// <reference types="google-apps-script" />
-type Completion = string | true | {
+export type Completion = string | true | {
     html: string;
 };
 export declare const setStatus: (thread: string, status: string) => void;
@@ -41,4 +41,3 @@ export type ProgressBinding = {
     getHtml: () => string;
 };
 export declare function bindTo(thread: string): ProgressBinding;
-export {};
