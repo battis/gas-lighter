@@ -238,7 +238,7 @@ importers:
     dependencies:
       '@battis/webpack':
         specifier: ^1.0.5
-        version: 1.0.5(jkcl4qlkjtnbyf2lg4flzu4ix4)
+        version: 1.0.5(5vh7rd6ueliybkdk3sqeqds3am)
       '@types/node':
         specifier: '*'
         version: 22.5.5
@@ -4579,6 +4579,12 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
 
+  mini-css-extract-plugin@2.9.2:
+    resolution: {integrity: sha512-GJuACcS//jtq4kCtd5ii/M0SZf7OZRH+BxdqXZHaJfb8TJiVl+NgQRPwiYt2EuqeSkNydn/7vP+bcE27C5mb9w==}
+    engines: {node: '>= 12.13.0'}
+    peerDependencies:
+      webpack: ^5.0.0
+
   minimalistic-assert@1.0.1:
     resolution: {integrity: sha512-UtJcAD4yEaGtjPezWuO9wC4nwUnVH/8/Im3yEHQP4b67cXlD/Qr9hdITCU1xDbSEXg2XKNaP8jsReV7vQd00/A==}
 
@@ -7129,7 +7135,7 @@ snapshots:
 
   '@battis/typescript-tricks@0.5.5': {}
 
-  '@battis/webpack@1.0.5(jkcl4qlkjtnbyf2lg4flzu4ix4)':
+  '@battis/webpack@1.0.5(5vh7rd6ueliybkdk3sqeqds3am)':
     dependencies:
       app-root-path: 3.1.0
       clean-webpack-plugin: 4.0.0(webpack@5.94.0)
@@ -7147,7 +7153,7 @@ snapshots:
       imagemin-jpegtran: 7.0.0
       imagemin-optipng: 8.0.0
       imagemin-svgo: 11.0.1
-      mini-css-extract-plugin: 2.9.1(webpack@5.94.0)
+      mini-css-extract-plugin: 2.9.2(webpack@5.94.0)
       postcss: 8.4.47
       postcss-loader: 8.1.1(postcss@8.4.47)(typescript@5.6.2)(webpack@5.94.0)
       postcss-preset-env: 10.0.3(postcss@8.4.47)
@@ -11790,17 +11796,17 @@ snapshots:
 
   min-indent@1.0.1: {}
 
-  mini-css-extract-plugin@2.9.1(webpack@5.94.0):
-    dependencies:
-      schema-utils: 4.2.0
-      tapable: 2.2.1
-      webpack: 5.94.0(webpack-cli@5.1.4)
-
   mini-css-extract-plugin@2.9.1(webpack@5.97.1):
     dependencies:
       schema-utils: 4.2.0
       tapable: 2.2.1
       webpack: 5.97.1(webpack-cli@5.1.4)
+
+  mini-css-extract-plugin@2.9.2(webpack@5.94.0):
+    dependencies:
+      schema-utils: 4.2.0
+      tapable: 2.2.1
+      webpack: 5.94.0(webpack-cli@5.1.4)
 
   minimalistic-assert@1.0.1: {}
 
