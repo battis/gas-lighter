@@ -189,7 +189,7 @@ importers:
         version: link:../../build/tsconfig
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       del-cli:
         specifier: ^5.1.0
         version: 5.1.0
@@ -207,7 +207,7 @@ importers:
         version: link:../../build/tsconfig
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       del-cli:
         specifier: ^5.1.0
         version: 5.1.0
@@ -229,7 +229,7 @@ importers:
         version: link:../../build/tsconfig
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       del-cli:
         specifier: ^5.1.0
         version: 5.1.0
@@ -329,7 +329,7 @@ importers:
         version: 1.0.7
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       acorn:
         specifier: ^8.12.1
         version: 8.12.1
@@ -462,7 +462,7 @@ importers:
         version: 1.0.7
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       copyfiles:
         specifier: ^2.4.1
         version: 2.4.1
@@ -524,7 +524,7 @@ importers:
         version: link:../../build/tsconfig
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       del-cli:
         specifier: ^5.1.0
         version: 5.1.0
@@ -542,7 +542,7 @@ importers:
         version: link:../../build/tsconfig
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       del-cli:
         specifier: ^5.1.0
         version: 5.1.0
@@ -560,7 +560,7 @@ importers:
         version: link:../../build/tsconfig
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       del-cli:
         specifier: ^5.1.0
         version: 5.1.0
@@ -582,7 +582,7 @@ importers:
         version: link:../../build/tsconfig
       '@types/google-apps-script':
         specifier: ^1.0.83
-        version: 1.0.83
+        version: 1.0.92
       del-cli:
         specifier: ^5.1.0
         version: 5.1.0
@@ -1752,8 +1752,8 @@ packages:
   '@types/glob@7.2.0':
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
 
-  '@types/google-apps-script@1.0.83':
-    resolution: {integrity: sha512-o+QNeNZxPAfYHzRiLHjub9qF0IILg21r9MzYlnrIHUT+/wcC70aqDfedmzKTgtzsj79zvoTZD0cjGgy46+1Ynw==}
+  '@types/google-apps-script@1.0.92':
+    resolution: {integrity: sha512-QWkcGH0Ll0NjPXfnMuMT1rH3ics/6s9DKZiAB8pQIZNfSrRaJIqoChOuR7Sr+n5oe5XF1NPJ4RVPE3Bvfh9heQ==}
 
   '@types/html-minifier-terser@6.1.0':
     resolution: {integrity: sha512-oh/6byDPnL1zeNXFrDXFLyZjkr1MsBG667IM792caf1L2UPOOMf65NFzjUH/ltyfwjAGfs1rsX1eftK0jC/KIg==}
@@ -8782,7 +8782,7 @@ snapshots:
       '@types/minimatch': 5.1.2
       '@types/node': 22.10.2
 
-  '@types/google-apps-script@1.0.83': {}
+  '@types/google-apps-script@1.0.92': {}
 
   '@types/html-minifier-terser@6.1.0': {}
 
