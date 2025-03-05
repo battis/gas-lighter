@@ -31,7 +31,7 @@ importers:
         version: 8.1.8(encoding@0.1.13)
       monorepo-package-paths:
         specifier: ^0.3.0
-        version: 0.3.8(prettier@3.5.2)
+        version: 0.3.8(prettier@3.5.3)
       syncpack:
         specifier: ^12.4.0
         version: 12.4.0(typescript@5.6.2)
@@ -50,10 +50,10 @@ importers:
         version: 1.0.5(nr5ce75ie7ax363t2mw5pv3jym)
       '@csstools/css-parser-algorithms':
         specifier: ^3.0.1
-        version: 3.0.4(@csstools/css-tokenizer@3.0.1)
+        version: 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer':
         specifier: ^3.0.1
-        version: 3.0.1
+        version: 3.0.3
       '@gas-lighter/bundle':
         specifier: workspace:*
         version: link:../../packages/build/bundle
@@ -317,10 +317,10 @@ importers:
     devDependencies:
       '@csstools/css-parser-algorithms':
         specifier: ^3.0.1
-        version: 3.0.4(@csstools/css-tokenizer@3.0.1)
+        version: 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer':
         specifier: ^3.0.1
-        version: 3.0.1
+        version: 3.0.3
       '@gas-lighter/tsconfig':
         specifier: workspace:*
         version: link:../../build/tsconfig
@@ -878,8 +878,8 @@ packages:
     peerDependencies:
       '@csstools/css-tokenizer': ^3.0.3
 
-  '@csstools/css-tokenizer@3.0.1':
-    resolution: {integrity: sha512-UBqaiu7kU0lfvaP982/o3khfXccVlHPWp0/vwwiIgDF0GmqqqxoiXC/6FCjlS9u92f7CoEz6nXKQnrn1kIAkOw==}
+  '@csstools/css-tokenizer@3.0.3':
+    resolution: {integrity: sha512-UJnjoFsmxfKUdNYdWgOB0mWUypuLvAfQPH1+pyvRJs6euowbFkFC6P13w1l8mJyi3vxYMxc9kld5jZEGRQs6bw==}
     engines: {node: '>=18'}
 
   '@csstools/media-query-list-parser@3.0.1':
@@ -5948,8 +5948,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.3
 
-  prettier@3.5.2:
-    resolution: {integrity: sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==}
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -7525,11 +7525,11 @@ snapshots:
   '@battis/prettier-config@1.5.3':
     dependencies:
       '@prettier/plugin-xml': 2.2.0
-      '@trivago/prettier-plugin-sort-imports': 4.3.0(prettier@3.5.2)
-      prettier: 3.5.2
-      prettier-plugin-ejs: 1.0.3(prettier@3.5.2)
-      prettier-plugin-packagejson: 2.5.2(prettier@3.5.2)
-      prettier-plugin-sql: 0.18.1(prettier@3.5.2)
+      '@trivago/prettier-plugin-sort-imports': 4.3.0(prettier@3.5.3)
+      prettier: 3.5.3
+      prettier-plugin-ejs: 1.0.3(prettier@3.5.3)
+      prettier-plugin-packagejson: 2.5.2(prettier@3.5.3)
+      prettier-plugin-sql: 0.18.1(prettier@3.5.3)
     transitivePeerDependencies:
       - '@vue/compiler-sfc'
       - supports-color
@@ -7809,35 +7809,35 @@ snapshots:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.9
 
-  '@csstools/cascade-layer-name-parser@2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)':
+  '@csstools/cascade-layer-name-parser@2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
     dependencies:
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
 
   '@csstools/color-helpers@5.0.1': {}
 
-  '@csstools/css-calc@2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)':
+  '@csstools/css-calc@2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
     dependencies:
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
 
-  '@csstools/css-color-parser@3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)':
+  '@csstools/css-color-parser@3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
     dependencies:
       '@csstools/color-helpers': 5.0.1
-      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
 
-  '@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1)':
+  '@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3)':
     dependencies:
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-tokenizer': 3.0.3
 
-  '@csstools/css-tokenizer@3.0.1': {}
+  '@csstools/css-tokenizer@3.0.3': {}
 
-  '@csstools/media-query-list-parser@3.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)':
+  '@csstools/media-query-list-parser@3.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)':
     dependencies:
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
 
   '@csstools/postcss-cascade-layers@5.0.0(postcss@8.4.47)':
     dependencies:
@@ -7847,35 +7847,35 @@ snapshots:
 
   '@csstools/postcss-color-function@4.0.2(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
 
   '@csstools/postcss-color-mix-function@3.0.2(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
 
   '@csstools/postcss-content-alt-text@2.0.1(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
 
   '@csstools/postcss-exponential-functions@2.0.1(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       postcss: 8.4.47
 
   '@csstools/postcss-font-format-keywords@4.0.0(postcss@8.4.47)':
@@ -7886,25 +7886,25 @@ snapshots:
 
   '@csstools/postcss-gamut-mapping@2.0.2(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       postcss: 8.4.47
 
   '@csstools/postcss-gradients-interpolation-method@5.0.2(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
 
   '@csstools/postcss-hwb-function@4.0.2(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
@@ -7928,8 +7928,8 @@ snapshots:
 
   '@csstools/postcss-light-dark-function@2.0.2(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
@@ -7953,23 +7953,23 @@ snapshots:
 
   '@csstools/postcss-logical-viewport-units@3.0.1(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
 
   '@csstools/postcss-media-minmax@2.0.1(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
-      '@csstools/media-query-list-parser': 3.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
+      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
+      '@csstools/media-query-list-parser': 3.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
       postcss: 8.4.47
 
   '@csstools/postcss-media-queries-aspect-ratio-number-values@3.0.1(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
-      '@csstools/media-query-list-parser': 3.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
+      '@csstools/media-query-list-parser': 3.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
       postcss: 8.4.47
 
   '@csstools/postcss-nested-calc@4.0.0(postcss@8.4.47)':
@@ -7985,9 +7985,9 @@ snapshots:
 
   '@csstools/postcss-oklab-function@4.0.2(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
@@ -7999,9 +7999,9 @@ snapshots:
 
   '@csstools/postcss-relative-color-syntax@3.0.2(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
@@ -8013,9 +8013,9 @@ snapshots:
 
   '@csstools/postcss-stepped-value-functions@4.0.1(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       postcss: 8.4.47
 
   '@csstools/postcss-text-decoration-shorthand@4.0.1(postcss@8.4.47)':
@@ -8026,9 +8026,9 @@ snapshots:
 
   '@csstools/postcss-trigonometric-functions@4.0.1(postcss@8.4.47)':
     dependencies:
-      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-calc': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       postcss: 8.4.47
 
   '@csstools/postcss-unset-value@4.0.0(postcss@8.4.47)':
@@ -8810,7 +8810,7 @@ snapshots:
   '@prettier/plugin-xml@2.2.0':
     dependencies:
       '@xml-tools/parser': 1.0.11
-      prettier: 3.5.2
+      prettier: 3.5.3
 
   '@sec-ant/readable-stream@0.4.1': {}
 
@@ -8862,7 +8862,7 @@ snapshots:
 
   '@tokenizer/token@0.3.0': {}
 
-  '@trivago/prettier-plugin-sort-imports@4.3.0(prettier@3.5.2)':
+  '@trivago/prettier-plugin-sort-imports@4.3.0(prettier@3.5.3)':
     dependencies:
       '@babel/generator': 7.17.7
       '@babel/parser': 7.25.6
@@ -8870,7 +8870,7 @@ snapshots:
       '@babel/types': 7.17.0
       javascript-natural-sort: 0.7.1
       lodash: 4.17.21
-      prettier: 3.5.2
+      prettier: 3.5.3
     transitivePeerDependencies:
       - supports-color
 
@@ -12562,7 +12562,7 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  monorepo-package-paths@0.3.8(prettier@3.5.2):
+  monorepo-package-paths@0.3.8(prettier@3.5.3):
     dependencies:
       '@battis/import-package-json': 0.1.7
       '@battis/qui-cli': 0.8.5
@@ -12570,7 +12570,7 @@ snapshots:
       package-json-type: 1.0.3
       yaml: 2.7.0
     optionalDependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
 
   moo@0.5.2: {}
 
@@ -13221,9 +13221,9 @@ snapshots:
 
   postcss-color-functional-notation@7.0.2(postcss@8.4.47):
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
@@ -13256,26 +13256,26 @@ snapshots:
 
   postcss-custom-media@11.0.1(postcss@8.4.47):
     dependencies:
-      '@csstools/cascade-layer-name-parser': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
-      '@csstools/media-query-list-parser': 3.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
+      '@csstools/cascade-layer-name-parser': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
+      '@csstools/media-query-list-parser': 3.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
       postcss: 8.4.47
 
   postcss-custom-properties@14.0.1(postcss@8.4.47):
     dependencies:
-      '@csstools/cascade-layer-name-parser': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/cascade-layer-name-parser': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
       postcss-value-parser: 4.2.0
 
   postcss-custom-selectors@8.0.1(postcss@8.4.47):
     dependencies:
-      '@csstools/cascade-layer-name-parser': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/cascade-layer-name-parser': 2.0.1(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       postcss: 8.4.47
       postcss-selector-parser: 6.1.2
 
@@ -13334,9 +13334,9 @@ snapshots:
 
   postcss-lab-function@7.0.2(postcss@8.4.47):
     dependencies:
-      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.1))(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.1)
-      '@csstools/css-tokenizer': 3.0.1
+      '@csstools/css-color-parser': 3.0.2(@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3))(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
+      '@csstools/css-tokenizer': 3.0.3
       '@csstools/postcss-progressive-custom-properties': 4.0.0(postcss@8.4.47)
       '@csstools/utilities': 2.0.0(postcss@8.4.47)
       postcss: 8.4.47
@@ -13627,26 +13627,26 @@ snapshots:
 
   prepend-http@2.0.0: {}
 
-  prettier-plugin-ejs@1.0.3(prettier@3.5.2):
+  prettier-plugin-ejs@1.0.3(prettier@3.5.3):
     dependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
 
-  prettier-plugin-packagejson@2.5.2(prettier@3.5.2):
+  prettier-plugin-packagejson@2.5.2(prettier@3.5.3):
     dependencies:
       sort-package-json: 2.10.1
       synckit: 0.9.1
     optionalDependencies:
-      prettier: 3.5.2
+      prettier: 3.5.3
 
-  prettier-plugin-sql@0.18.1(prettier@3.5.2):
+  prettier-plugin-sql@0.18.1(prettier@3.5.3):
     dependencies:
       jsox: 1.2.119
       node-sql-parser: 4.18.0
-      prettier: 3.5.2
+      prettier: 3.5.3
       sql-formatter: 15.4.2
       tslib: 2.7.0
 
-  prettier@3.5.2: {}
+  prettier@3.5.3: {}
 
   pretty-error@4.0.0:
     dependencies:
