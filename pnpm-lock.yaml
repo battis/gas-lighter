@@ -47,7 +47,7 @@ importers:
     devDependencies:
       '@battis/webpack':
         specifier: ^1.0.5
-        version: 1.0.5(of6kkabymd2geyrbvu4i7ic5lu)
+        version: 1.0.5(4keldj5n7hruu36gelartswlqe)
       '@csstools/css-parser-algorithms':
         specifier: ^3.0.1
         version: 3.0.4(@csstools/css-tokenizer@3.0.3)
@@ -101,7 +101,7 @@ importers:
         version: 2.6.0
       html-webpack-plugin:
         specifier: ^5.6.0
-        version: 5.6.0(webpack@5.97.1)
+        version: 5.6.3(webpack@5.97.1)
       image-minimizer-webpack-plugin:
         specifier: ^4.1.0
         version: 4.1.0(imagemin@9.0.0)(webpack@5.97.1)
@@ -368,7 +368,7 @@ importers:
         version: 6.2.0(webpack@5.97.1)
       html-webpack-plugin:
         specifier: ^5.6.0
-        version: 5.6.0(webpack@5.97.1)
+        version: 5.6.3(webpack@5.97.1)
       image-minimizer-webpack-plugin:
         specifier: ^4.1.0
         version: 4.1.0(imagemin@9.0.0)(webpack@5.97.1)
@@ -3964,6 +3964,18 @@ packages:
       webpack:
         optional: true
 
+  html-webpack-plugin@5.6.3:
+    resolution: {integrity: sha512-QSf1yjtSAsmf7rYBV7XX86uua4W/vkhIt0xNXKbsi2foEeW7vjJQz4bhnpL3xH+l1ryl1680uNv968Z+X6jSYg==}
+    engines: {node: '>=10.13.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || 1.x
+      webpack: ^5.20.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      webpack:
+        optional: true
+
   htmlparser2@6.1.0:
     resolution: {integrity: sha512-gyyPk6rgonLFEDGoeRgQNaEUvdJ4ktTmmUh/h2t7s+M8oPpIPxgNACWa+6ESR57kXstwqPiCut0V8NRpcwgU7A==}
 
@@ -6873,6 +6885,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
+  terser@5.39.0:
+    resolution: {integrity: sha512-LBAhFyLho16harJoWMg/nZsQYgTrg5jXOn2nCYjRUcZZEdE3qa2zb8QEDRUGVZBW4rlazf2fxkg8tztybTaqWw==}
+    engines: {node: '>=10'}
+    hasBin: true
+
   text-extensions@1.9.0:
     resolution: {integrity: sha512-wiBrwC1EhBelW12Zy26JeOUkQ5mRu+5o8rpsJk5+2t+Y5vE7e842qtZDQ2g1NpX/29HdyFeJ4nSIhI47ENSxlQ==}
     engines: {node: '>=0.10'}
@@ -7709,6 +7726,42 @@ snapshots:
 
   '@battis/typescript-tricks@0.5.5': {}
 
+  '@battis/webpack@1.0.5(4keldj5n7hruu36gelartswlqe)':
+    dependencies:
+      app-root-path: 3.1.0
+      clean-webpack-plugin: 4.0.0(webpack@5.97.1)
+      copy-webpack-plugin: 13.0.0(webpack@5.97.1)
+      css-loader: 7.1.2(webpack@5.97.1)
+      css-minimizer-webpack-plugin: 7.0.0(webpack@5.97.1)
+      dotenv-webpack: 8.1.0(webpack@5.97.1)
+      favicons: 7.2.0
+      favicons-webpack-plugin: 6.0.1(favicons@7.2.0)(webpack@5.97.1)
+      file-loader: 6.2.0(webpack@5.97.1)
+      html-webpack-plugin: 5.6.3(webpack@5.97.1)
+      image-minimizer-webpack-plugin: 4.1.0(imagemin@9.0.0)(webpack@5.97.1)
+      imagemin: 9.0.0
+      imagemin-gifsicle: 7.0.0
+      imagemin-jpegtran: 7.0.0
+      imagemin-optipng: 8.0.0
+      imagemin-svgo: 11.0.1
+      mini-css-extract-plugin: 2.9.1(webpack@5.97.1)
+      postcss: 8.5.3
+      postcss-loader: 8.1.1(postcss@8.5.3)(typescript@5.6.2)(webpack@5.97.1)
+      postcss-preset-env: 10.0.3(postcss@8.5.3)
+      raw-loader: 4.0.2(webpack@5.97.1)
+      sass: 1.78.0
+      sass-loader: 16.0.1(sass@1.78.0)(webpack@5.97.1)
+      style-loader: 4.0.0(webpack@5.97.1)
+      terser-webpack-plugin: 5.3.10(webpack@5.97.1)
+      ts-loader: 9.5.1(typescript@5.6.2)(webpack@5.97.1)
+      typescript: 5.6.2
+      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1)
+      webpack: 5.97.1(webpack-cli@6.0.1)
+      webpack-cli: 6.0.1(webpack-dev-server@5.1.0)(webpack@5.97.1)
+      webpack-dev-server: 5.1.0(webpack-cli@6.0.1)(webpack@5.97.1)
+    optionalDependencies:
+      add-peer-dependencies: 0.1.12
+
   '@battis/webpack@1.0.5(5fb2slrvz5mso4mo5j4ukqb3hu)':
     dependencies:
       app-root-path: 3.1.0
@@ -7780,42 +7833,6 @@ snapshots:
       webpack-dev-server: 5.1.0(webpack-cli@6.0.1)(webpack@5.97.1)
     optionalDependencies:
       add-peer-dependencies: 0.1.5
-
-  '@battis/webpack@1.0.5(of6kkabymd2geyrbvu4i7ic5lu)':
-    dependencies:
-      app-root-path: 3.1.0
-      clean-webpack-plugin: 4.0.0(webpack@5.97.1)
-      copy-webpack-plugin: 13.0.0(webpack@5.97.1)
-      css-loader: 7.1.2(webpack@5.97.1)
-      css-minimizer-webpack-plugin: 7.0.0(webpack@5.97.1)
-      dotenv-webpack: 8.1.0(webpack@5.97.1)
-      favicons: 7.2.0
-      favicons-webpack-plugin: 6.0.1(favicons@7.2.0)(webpack@5.97.1)
-      file-loader: 6.2.0(webpack@5.97.1)
-      html-webpack-plugin: 5.6.0(webpack@5.97.1)
-      image-minimizer-webpack-plugin: 4.1.0(imagemin@9.0.0)(webpack@5.97.1)
-      imagemin: 9.0.0
-      imagemin-gifsicle: 7.0.0
-      imagemin-jpegtran: 7.0.0
-      imagemin-optipng: 8.0.0
-      imagemin-svgo: 11.0.1
-      mini-css-extract-plugin: 2.9.1(webpack@5.97.1)
-      postcss: 8.5.3
-      postcss-loader: 8.1.1(postcss@8.5.3)(typescript@5.6.2)(webpack@5.97.1)
-      postcss-preset-env: 10.0.3(postcss@8.5.3)
-      raw-loader: 4.0.2(webpack@5.97.1)
-      sass: 1.78.0
-      sass-loader: 16.0.1(sass@1.78.0)(webpack@5.97.1)
-      style-loader: 4.0.0(webpack@5.97.1)
-      terser-webpack-plugin: 5.3.10(webpack@5.97.1)
-      ts-loader: 9.5.1(typescript@5.6.2)(webpack@5.97.1)
-      typescript: 5.6.2
-      url-loader: 4.1.1(file-loader@6.2.0(webpack@5.97.1))(webpack@5.97.1)
-      webpack: 5.97.1(webpack-cli@6.0.1)
-      webpack-cli: 6.0.1(webpack-dev-server@5.1.0)(webpack@5.97.1)
-      webpack-dev-server: 5.1.0(webpack-cli@6.0.1)(webpack@5.97.1)
-    optionalDependencies:
-      add-peer-dependencies: 0.1.12
 
   '@colors/colors@1.6.0': {}
 
@@ -11335,7 +11352,7 @@ snapshots:
       parse5: 7.1.2
       webpack: 5.97.1(webpack-cli@6.0.1)
     optionalDependencies:
-      html-webpack-plugin: 5.6.0(webpack@5.97.1)
+      html-webpack-plugin: 5.6.3(webpack@5.97.1)
     transitivePeerDependencies:
       - '@rspack/core'
 
@@ -11862,7 +11879,7 @@ snapshots:
       he: 1.2.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.32.0
+      terser: 5.39.0
 
   html-webpack-plugin@5.6.0(webpack@5.94.0):
     dependencies:
@@ -11875,6 +11892,16 @@ snapshots:
       webpack: 5.94.0(webpack-cli@5.1.4)
 
   html-webpack-plugin@5.6.0(webpack@5.97.1):
+    dependencies:
+      '@types/html-minifier-terser': 6.1.0
+      html-minifier-terser: 6.1.0
+      lodash: 4.17.21
+      pretty-error: 4.0.0
+      tapable: 2.2.1
+    optionalDependencies:
+      webpack: 5.97.1(webpack-cli@6.0.1)
+
+  html-webpack-plugin@5.6.3(webpack@5.97.1):
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
@@ -15463,6 +15490,13 @@ snapshots:
     dependencies:
       '@jridgewell/source-map': 0.3.6
       acorn: 8.14.0
+      commander: 2.20.3
+      source-map-support: 0.5.21
+
+  terser@5.39.0:
+    dependencies:
+      '@jridgewell/source-map': 0.3.6
+      acorn: 8.12.1
       commander: 2.20.3
       source-map-support: 0.5.21
 
