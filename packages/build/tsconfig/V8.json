@@ -1,0 +1,10 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "target": "ES2019"
+  },
+  "documentation": {
+    "url": "https://github.com/google/clasp/blob/master/docs/typescript.md#v8-engine-support",
+    "name": "Clasp Typescript docs"
+  }
+}

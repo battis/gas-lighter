@@ -1,0 +1,16 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "isolatedModules": true,
+    "noLib": true,
+    "noResolve": true,
+    "target": "ES3",
+    "module": "None",
+    "noImplicitUseStrict": true,
+    "experimentalDecorators": true
+  },
+  "documentation": {
+    "url": "https://github.com/google/clasp/blob/master/docs/typescript.md#typescript-configuration",
+    "name": "Clasp Typescript docs"
+  }
+}
