@@ -31,7 +31,7 @@ importers:
         version: 8.1.8(encoding@0.1.13)
       monorepo-package-paths:
         specifier: ^0.3.0
-        version: 0.3.10(@types/node@22.15.15)(prettier@3.5.3)
+        version: 0.3.10(@types/node@22.15.15)(prettier@3.6.2)
       syncpack:
         specifier: ^12.4.0
         version: 12.4.0(typescript@5.6.2)
@@ -47,7 +47,7 @@ importers:
     devDependencies:
       '@battis/webpack':
         specifier: ^1.0.5
-        version: 1.0.5(p5wubp2afwqxhvqv2chp26trju)
+        version: 1.0.5(5hv5zanfmn34oqka6plw7kfxny)
       '@csstools/css-parser-algorithms':
         specifier: ^3.0.1
         version: 3.0.4(@csstools/css-tokenizer@3.0.4)
@@ -143,7 +143,7 @@ importers:
         version: 1.78.0
       sass-loader:
         specifier: ^16.0.1
-        version: 16.0.1(sass@1.78.0)(webpack@5.99.7)
+        version: 16.0.5(sass@1.78.0)(webpack@5.99.7)
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.99.7)
@@ -413,7 +413,7 @@ importers:
         version: 1.78.0
       sass-loader:
         specifier: ^16.0.1
-        version: 16.0.1(sass@1.78.0)(webpack@5.99.7)
+        version: 16.0.5(sass@1.78.0)(webpack@5.99.7)
       style-loader:
         specifier: ^4.0.0
         version: 4.0.0(webpack@5.99.7)
@@ -6168,8 +6168,8 @@ packages:
     peerDependencies:
       prettier: ^3.0.3
 
-  prettier@3.5.3:
-    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+  prettier@3.6.2:
+    resolution: {integrity: sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -6522,6 +6522,27 @@ packages:
 
   sass-loader@16.0.1:
     resolution: {integrity: sha512-xACl1ToTsKnL9Ce5yYpRxrLj9QUDCnwZNhzpC7tKiFyA8zXsd3Ap+HGVnbCgkdQcm43E+i6oKAWBsvGA6ZoiMw==}
+    engines: {node: '>= 18.12.0'}
+    peerDependencies:
+      '@rspack/core': 0.x || 1.x
+      node-sass: ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
+      sass: ^1.3.0
+      sass-embedded: '*'
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      '@rspack/core':
+        optional: true
+      node-sass:
+        optional: true
+      sass:
+        optional: true
+      sass-embedded:
+        optional: true
+      webpack:
+        optional: true
+
+  sass-loader@16.0.5:
+    resolution: {integrity: sha512-oL+CMBXrj6BZ/zOq4os+UECPL+bWqt6OAC6DWS8Ln8GZRcMDjlJ4JC3FBDuHJdYaFWIdKNIBYmtZtK2MaMkNIw==}
     engines: {node: '>= 18.12.0'}
     peerDependencies:
       '@rspack/core': 0.x || 1.x
@@ -7790,13 +7811,13 @@ snapshots:
 
   '@battis/prettier-config@1.5.7(typescript@5.6.2)':
     dependencies:
-      '@prettier/plugin-xml': 3.4.1(prettier@3.5.3)
-      '@trivago/prettier-plugin-sort-imports': 5.2.2(prettier@3.5.3)
-      prettier: 3.5.3
-      prettier-plugin-ejs: 1.0.3(prettier@3.5.3)
-      prettier-plugin-organize-imports: 4.1.0(prettier@3.5.3)(typescript@5.6.2)
-      prettier-plugin-packagejson: 2.5.10(prettier@3.5.3)
-      prettier-plugin-sql: 0.18.1(prettier@3.5.3)
+      '@prettier/plugin-xml': 3.4.1(prettier@3.6.2)
+      '@trivago/prettier-plugin-sort-imports': 5.2.2(prettier@3.6.2)
+      prettier: 3.6.2
+      prettier-plugin-ejs: 1.0.3(prettier@3.6.2)
+      prettier-plugin-organize-imports: 4.1.0(prettier@3.6.2)(typescript@5.6.2)
+      prettier-plugin-packagejson: 2.5.10(prettier@3.6.2)
+      prettier-plugin-sql: 0.18.1(prettier@3.6.2)
     transitivePeerDependencies:
       - '@vue/compiler-sfc'
       - prettier-plugin-svelte
@@ -7924,7 +7945,7 @@ snapshots:
 
   '@battis/typescript-tricks@0.5.5': {}
 
-  '@battis/webpack@1.0.5(p5wubp2afwqxhvqv2chp26trju)':
+  '@battis/webpack@1.0.5(5hv5zanfmn34oqka6plw7kfxny)':
     dependencies:
       app-root-path: 3.1.0
       clean-webpack-plugin: 4.0.0(webpack@5.99.7)
@@ -7948,7 +7969,7 @@ snapshots:
       postcss-preset-env: 10.0.3(postcss@8.5.4)
       raw-loader: 4.0.2(webpack@5.99.7)
       sass: 1.78.0
-      sass-loader: 16.0.1(sass@1.78.0)(webpack@5.99.7)
+      sass-loader: 16.0.5(sass@1.78.0)(webpack@5.99.7)
       style-loader: 4.0.0(webpack@5.99.7)
       terser-webpack-plugin: 5.3.10(webpack@5.99.7)
       ts-loader: 9.5.1(typescript@5.6.2)(webpack@5.99.7)
@@ -9396,10 +9417,10 @@ snapshots:
       write-file-atomic: 5.0.1
       write-yaml-file: 5.0.0
 
-  '@prettier/plugin-xml@3.4.1(prettier@3.5.3)':
+  '@prettier/plugin-xml@3.4.1(prettier@3.6.2)':
     dependencies:
       '@xml-tools/parser': 1.0.11
-      prettier: 3.5.3
+      prettier: 3.6.2
 
   '@sec-ant/readable-stream@0.4.1': {}
 
@@ -9451,7 +9472,7 @@ snapshots:
 
   '@tokenizer/token@0.3.0': {}
 
-  '@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.3)':
+  '@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.6.2)':
     dependencies:
       '@babel/generator': 7.27.0
       '@babel/parser': 7.27.0
@@ -9459,7 +9480,7 @@ snapshots:
       '@babel/types': 7.27.0
       javascript-natural-sort: 0.7.1
       lodash: 4.17.21
-      prettier: 3.5.3
+      prettier: 3.6.2
     transitivePeerDependencies:
       - supports-color
 
@@ -13362,7 +13383,7 @@ snapshots:
 
   modify-values@1.0.1: {}
 
-  monorepo-package-paths@0.3.10(@types/node@22.15.15)(prettier@3.5.3):
+  monorepo-package-paths@0.3.10(@types/node@22.15.15)(prettier@3.6.2):
     dependencies:
       '@battis/import-package-json': 0.1.7
       '@battis/qui-cli': 2.1.3
@@ -13372,7 +13393,7 @@ snapshots:
       package-json-type: 1.0.3
       yaml: 2.7.1
     optionalDependencies:
-      prettier: 3.5.3
+      prettier: 3.6.2
     transitivePeerDependencies:
       - '@types/node'
 
@@ -14867,31 +14888,31 @@ snapshots:
 
   prepend-http@2.0.0: {}
 
-  prettier-plugin-ejs@1.0.3(prettier@3.5.3):
+  prettier-plugin-ejs@1.0.3(prettier@3.6.2):
     dependencies:
-      prettier: 3.5.3
+      prettier: 3.6.2
 
-  prettier-plugin-organize-imports@4.1.0(prettier@3.5.3)(typescript@5.6.2):
+  prettier-plugin-organize-imports@4.1.0(prettier@3.6.2)(typescript@5.6.2):
     dependencies:
-      prettier: 3.5.3
+      prettier: 3.6.2
       typescript: 5.6.2
 
-  prettier-plugin-packagejson@2.5.10(prettier@3.5.3):
+  prettier-plugin-packagejson@2.5.10(prettier@3.6.2):
     dependencies:
       sort-package-json: 2.15.1
       synckit: 0.9.2
     optionalDependencies:
-      prettier: 3.5.3
+      prettier: 3.6.2
 
-  prettier-plugin-sql@0.18.1(prettier@3.5.3):
+  prettier-plugin-sql@0.18.1(prettier@3.6.2):
     dependencies:
       jsox: 1.2.121
       node-sql-parser: 4.18.0
-      prettier: 3.5.3
+      prettier: 3.6.2
       sql-formatter: 15.5.2
       tslib: 2.8.1
 
-  prettier@3.5.3: {}
+  prettier@3.6.2: {}
 
   pretty-error@4.0.0:
     dependencies:
@@ -15260,6 +15281,13 @@ snapshots:
     optionalDependencies:
       sass: 1.83.1
       webpack: 5.94.0(webpack-cli@5.1.4)
+
+  sass-loader@16.0.5(sass@1.78.0)(webpack@5.99.7):
+    dependencies:
+      neo-async: 2.6.2
+    optionalDependencies:
+      sass: 1.78.0
+      webpack: 5.99.7(webpack-cli@6.0.1)
 
   sass@1.78.0:
     dependencies:
